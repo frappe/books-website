@@ -14,9 +14,7 @@
             for freelancers and small business owners. Spend more time doing
             your business and less time keeping books.
           </p>
-          <div class="mt-8">
-            <Button class="bg-brand text-white">Download</Button>
-          </div>
+          <DownloadButton class="mt-8" />
         </div>
       </div>
       <div class="absolute top-0 left-0 w-full pointer-events-none">
@@ -36,6 +34,7 @@
 import WhySection from '../components/WhySection.vue';
 import CardSection from '../components/CardSection.vue';
 import FeaturesSection from '../components/FeaturesSection.vue';
+import DownloadButton from '../components/DownloadButton.vue';
 
 export default {
   metaInfo: {
@@ -44,7 +43,8 @@ export default {
   components: {
     WhySection,
     CardSection,
-    FeaturesSection
+    FeaturesSection,
+    DownloadButton
   }
 };
 </script>

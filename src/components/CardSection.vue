@@ -125,7 +125,7 @@
         ERPNext, we came up with a simple app that does one thing well,
         Accounting.
       </p>
-      <img class="w-4/5 mx-auto rounded-lg mt-12" src="../assets/team-1.png" />
+      <img class="w-4/5 mx-auto rounded-t-lg mt-12" src="../assets/team-1.png" />
     </div>
   </section>
 </template>
