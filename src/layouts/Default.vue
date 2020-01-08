@@ -24,8 +24,8 @@
                 Vidyavihar West,<br />
                 Mumbai, Maharashtra - 400086, India
               </p>
-              <p class="mt-5">+91 22 4897 0555</p>
-              <p class="mt-3">hello@frappe.io</p>
+              <p class="mt-5"><a href="tel:+91-22-4897-0555">+91 22 4897 0555</a></p>
+              <p class="mt-3"><a href="mailto:hello@frappe.io">hello@frappe.io</a></p>
             </div>
           </div>
           <div>
