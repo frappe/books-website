@@ -8,7 +8,7 @@
             Accounting Software<br />
             for Small Businesses
           </h1>
-          <p class="mt-5 w-2/5 text-gray-700">
+          <p class="mt-5 w-2/5 text-gray-700 leading-relaxed">
             Frappe Books is a desktop-based accounting application built for
             small businesses. It simplifies invoicing, billing, and accounting
             for freelancers and small business owners. Spend more time doing

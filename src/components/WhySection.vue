@@ -1,19 +1,18 @@
 <template>
   <div>
     <section class="pt-12 pb-48">
-      <div class="container flex">
+      <div class="container flex items-center">
         <div class="w-1/2">
           <h2 class="font-extrabold text-5xl leading-tight">
-            Why build another<br />
-            accounting software?
+            Why Frappe Books?
           </h2>
-          <p class="mt-5 text-gray-700">
+          <p class="mt-5 text-gray-700 leading-relaxed">
             Offline Desktop software is a rare breed these days. Offline
             Accounting software even more so. With the myriad of cloud software
             available today, you must either pay for a subscription or host it
             on your server if the source is available for free.
           </p>
-          <p class="mt-3 text-gray-700">
+          <p class="mt-3 text-gray-700 leading-relaxed">
             Free accounting tools are not easily available and most tools
             require a server setup. Tools like GNUCash, which is open source and
             works offline, lacks in terms of UX. You need not require hours of
@@ -22,20 +21,20 @@
           </p>
         </div>
         <div class="w-1/2">
-          <!-- illustration -->
+          <GirlUsingLaptop class="w-4/5 ml-auto" />
         </div>
       </div>
     </section>
     <section class="bg-gray-100 py-48">
-      <div class="container flex">
+      <div class="container flex items-center">
         <div class="w-1/2">
-          <!-- illustration -->
+          <BoyBesideLaptop class="w-4/5" />
         </div>
         <div class="w-1/2">
           <h2 class="font-extrabold text-5xl leading-tight">
-            Why not cloud?
+            Why Desktop?
           </h2>
-          <p class="mt-5 text-gray-700">
+          <p class="mt-5 text-gray-700 leading-relaxed">
             Cloud apps make it easy to access our work from multiple devices
             from anywhere. But the primary issue with cloud apps is ownership of
             data. All your data must go through a server and you can only do
