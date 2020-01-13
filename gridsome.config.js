@@ -1,7 +1,8 @@
 const tailwind = require('tailwindcss');
 const purgecss = require('@fullhuman/postcss-purgecss');
+const postcssNested = require('postcss-nested');
 
-const postcssPlugins = [tailwind('./tailwind.config.js')];
+const postcssPlugins = [postcssNested(), tailwind('./tailwind.config.js')];
 
 if (process.env.NODE_ENV === 'production') {
   postcssPlugins.push(purgecss());
@@ -9,7 +10,17 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   siteName: 'Frappe Books',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Documentation', // Required
+        baseDir: './docs', // Where .md files are located
+        pathPrefix: '/docs', // Add route prefix. Optional
+        template: './src/templates/DocPage.vue'
+      }
+    }
+  ],
   css: {
     loaderOptions: {
       postcss: {

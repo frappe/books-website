@@ -1,0 +1,39 @@
+- title: Getting Started
+  items:
+    - title: Load File
+      link: /docs/load-file
+    - title: Company
+      link: /docs/company
+    - title: Chart of Accounts
+      link: /docs/chart-of-accounts
+    - title: Taxes
+      link: /docs/taxes
+
+- title: Invoicing
+  items:
+    - title: Customers
+      link: /docs/customer/
+    - title: Items
+      link: /docs/item/
+    - title: Invoice
+      link: /docs/invoice/
+
+- title: Billing
+  items:
+    - title: Suppliers
+      link: /docs/supplier/
+    - title: Items
+      link: /docs/item/
+    - title: Bill
+      link: /docs/bill/
+
+- title: Reports
+  items:
+    - title: General Ledger
+      link: /docs/general-ledger/
+    - title: Trial Balance
+      link: /docs/trial-balance/
+    - title: Profit and Loss Statement
+      link: /docs/profit-and-loss-statement/
+    - title: Balance Sheet
+      link: /docs/balance-sheet/
