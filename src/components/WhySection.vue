@@ -1,52 +1,77 @@
 <template>
   <div>
-    <section class="pt-12 pb-48">
+    <section class="bg-gray-100 py-32 md:py-48">
       <div class="container flex items-center">
-        <div class="w-1/2">
-          <h2 class="font-extrabold text-5xl leading-tight">
+        <div class="w-full md:w-1/2">
+          <h2 class="font-extrabold text-3xl sm:text-5xl leading-tight">
             Why Frappe Books?
           </h2>
           <p class="mt-5 text-gray-700 leading-relaxed">
             Offline Desktop software is a rare breed these days. Offline
-            Accounting software even more so. With the myriad of cloud software
-            available today, you must either pay for a subscription or host it
-            on your server if the source is available for free.
+            Accounting software even more so. Existing solutions like Tally and
+            GNUCash are either paid or lack in terms of UX. This is why we need
+            Frappe Books.
           </p>
-          <p class="mt-3 text-gray-700 leading-relaxed">
-            Free accounting tools are not easily available and most tools
-            require a server setup. Tools like GNUCash, which is open source and
-            works offline, lacks in terms of UX. You need not require hours of
-            training just to track your income and expenses. Frappe Books is an
-            alternative to GNU Cash and Tally and is built with a modern UI.
-          </p>
+          <ul class="bullet-list text-gray-700 mt-6">
+            <li class="mb-4">
+              Local app, local database
+            </li>
+            <li class="mb-4">
+              Simple and clean user interface
+            </li>
+            <li class="mb-4">
+              Insightful Financial Reports
+            </li>
+            <li class="mb-4">
+              Free and Open Source
+            </li>
+          </ul>
         </div>
-        <div class="w-1/2">
+        <div class="hidden md:block w-1/2">
           <GirlUsingLaptop class="w-4/5 ml-auto" />
         </div>
       </div>
     </section>
-    <section class="bg-gray-100 py-48">
+    <section class="py-32 md:py-48">
       <div class="container flex items-center">
-        <div class="w-1/2">
+        <div class="hidden md:block w-1/2">
           <BoyBesideLaptop class="w-4/5" />
         </div>
-        <div class="w-1/2">
-          <h2 class="font-extrabold text-5xl leading-tight">
+        <div class="w-full md:w-1/2">
+          <h2 class="font-extrabold text-3xl sm:text-5xl leading-tight">
             Why Desktop?
           </h2>
           <p class="mt-5 text-gray-700 leading-relaxed">
-            Cloud apps make it easy to access our work from multiple devices
-            from anywhere. But the primary issue with cloud apps is ownership of
-            data. All your data must go through a server and you can only do
-            things that server will let you do. The cloud provider has full
-            control over your data. Pricing of cloud apps could change anytime,
-            and you don’t have the choice to use an older version as you have
-            with offline desktop apps. With traditional desktop apps, you have
+            Cloud apps compromise the ownership of your data. All your data must
+            go through a server and you are bound by limitations set by the
+            server. Pricing could change anytime, and you don’t have the choice
+            to use an older version. With traditional desktop apps, you have
             much more control over your data and you can keep using a version
             that works for you.
           </p>
+          <ul class="bullet-list text-gray-700 mt-6">
+            <li class="mb-4">No hidden costs</li>
+            <li class="mb-4">No cloud, no hosting</li>
+            <li class="mb-4">Own your data</li>
+            <li class="mb-4">Privacy by default</li>
+          </ul>
         </div>
       </div>
     </section>
   </div>
 </template>
+
+<style scoped>
+.bullet-list li {
+  display: flex;
+  align-items: center;
+}
+
+.bullet-list li::before {
+  content: url('../assets/check-circle.svg');
+  display: inline-block;
+  width: theme('spacing.5');
+  height: theme('spacing.5');
+  margin-right: theme('spacing.2');
+}
+</style>

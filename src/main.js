@@ -4,6 +4,7 @@ require('~/style.css');
 
 import DefaultLayout from '~/layouts/Default.vue';
 import DocsLayout from '~/layouts/DocsLayout.vue';
+import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Button from './components/Button.vue';
 import CheckCircle from './components/CheckCircle.vue';
@@ -14,6 +15,7 @@ export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout);
   Vue.component('DocsLayout', DocsLayout);
+  Vue.component('Header', Header);
   Vue.component('Footer', Footer);
   Vue.component('Button', Button);
   Vue.component('CheckCircle', CheckCircle);

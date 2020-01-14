@@ -19,6 +19,12 @@ module.exports = {
         pathPrefix: '/docs', // Add route prefix. Optional
         template: './src/templates/DocPage.vue'
       }
+    },
+    {
+      use: 'gridsome-plugin-svg',
+      options: {
+        goesBothWays: true
+      }
     }
   ],
   css: {

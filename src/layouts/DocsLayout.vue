@@ -1,24 +1,12 @@
 <template>
   <div class="font-body antialiased">
-    <header class="py-7 border-b sticky bg-white top-0 z-10">
-      <div class="container flex items-baseline justify-between ">
-        <g-link class="text-xl text-gray-900 font-bold" to="/">
-          {{ $static.metadata.siteName }}
-        </g-link>
-        <nav class="text-gray-800 text-sm">
-          <g-link to="/docs">Documentation</g-link>
-          <g-link class="ml-12" to="https://github.com/frappe/books">
-            GitHub
-          </g-link>
-          <g-link class="ml-12" to="/about">About</g-link>
-        </nav>
-      </div>
-    </header>
-    <div class="container flex">
-      <aside class="w-64 pr-4 pl-1 py-4 border-r">
+    <Header class="border-b" />
+    <div class="container flex flex-col md:flex-row">
+      <aside class="w-full md:w-64 pr-4 pl-1 py-8 md:border-r order-1 md:order-none">
+        <h2 class="md:hidden font-bold text-xl">Table of Contents</h2>
         <g-link
           exact
-          class="block leading-relaxed py-1 text-sm hover:text-brand"
+          class="leading-relaxed py-1 text-sm hover:text-brand hidden md:block"
           to="/docs"
         >
           Home
@@ -42,7 +30,7 @@
           </template>
         </template>
       </aside>
-      <main class="markdown-content py-8 px-16 flex-1">
+      <main class="markdown-content py-8 px-0 md:px-16 flex-1">
         <slot />
         <div class="mt-16 mb-5">
           <a :href="editLink" target="_blank" class="text-sm">
@@ -125,54 +113,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .active--exact {
   color: theme('colors.brand');
   font-weight: theme('fontWeight.bold');
-}
-
-.markdown-content {
-  h1 {
-    font-size: theme('fontSize.3xl');
-    font-weight: theme('fontWeight.extrabold');
-    margin-bottom: theme('spacing.7');
-  }
-
-  h2 {
-    font-size: theme('fontSize.xl');
-    font-weight: theme('fontWeight.extrabold');
-    margin-top: theme('spacing.10');
-    margin-bottom: theme('spacing.5');
-  }
-
-  h3 {
-    font-size: theme('fontSize.lg');
-    font-weight: theme('fontWeight.extrabold');
-    margin-top: theme('spacing.10');
-    margin-bottom: theme('spacing.5');
-  }
-
-  p {
-    margin-bottom: theme('spacing.4');
-  }
-
-  ol {
-    margin-left: theme('spacing.6');
-    list-style-type: decimal;
-  }
-
-  ul {
-    margin-left: theme('spacing.6');
-    list-style-type: disc;
-  }
-
-  li {
-    margin-bottom: theme('spacing.4');
-  }
-
-  a {
-    color: theme('colors.brand');
-    font-weight: theme('fontWeight.medium');
-  }
 }
 </style>

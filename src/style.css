@@ -4,4 +4,49 @@
 
 @tailwind components;
 
+.markdown-content {
+  h1 {
+    font-size: theme('fontSize.3xl');
+    font-weight: theme('fontWeight.extrabold');
+    margin-bottom: theme('spacing.7');
+  }
+
+  h2 {
+    font-size: theme('fontSize.xl');
+    font-weight: theme('fontWeight.extrabold');
+    margin-top: theme('spacing.10');
+    margin-bottom: theme('spacing.5');
+  }
+
+  h3 {
+    font-size: theme('fontSize.lg');
+    font-weight: theme('fontWeight.extrabold');
+    margin-top: theme('spacing.10');
+    margin-bottom: theme('spacing.5');
+  }
+
+  p {
+    margin-bottom: theme('spacing.4');
+  }
+
+  ol {
+    margin-left: theme('spacing.6');
+    list-style-type: decimal;
+  }
+
+  ul {
+    margin-left: theme('spacing.6');
+    list-style-type: disc;
+  }
+
+  li {
+    margin-bottom: theme('spacing.4');
+  }
+
+  a {
+    color: theme('colors.brand');
+    font-weight: theme('fontWeight.medium');
+  }
+}
+
 @tailwind utilities;

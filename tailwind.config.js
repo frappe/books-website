@@ -16,7 +16,8 @@ module.exports = {
       ]
     },
     container: {
-      center: true
+      center: true,
+      padding: '2rem'
     },
     screens: {
       sm: '640px',
@@ -34,6 +35,14 @@ module.exports = {
       },
       colors: {
         brand: '#2490EF'
+      },
+      minHeight: {
+        32: '8rem'
+      },
+      boxShadow: {
+        default: '0 3px 14px 0 rgba(68,73,82,0.03)',
+        lg: '0 8px 10px 0 rgba(17,43,66,0.12)',
+        xl: '0 12px 20px 4px rgba(68,73,82,0.08)'
       }
     }
   },

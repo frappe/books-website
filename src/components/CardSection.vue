@@ -1,14 +1,17 @@
 <template>
-  <section class="py-48">
-    <div class="container flex">
+  <section class="py-32 md:py-48">
+    <div class="container flex flex-wrap lg:flex-no-wrap">
       <div
-        class="w-5/12 pt-8 pb-20 px-16 bg-gray-900 text-white text-center rounded-lg"
+        class="w-full lg:w-5/12 pt-20 lg:pt-8 pb-20 px-8 lg:px-16 bg-gray-900 text-white text-center rounded-lg"
       >
-        <img class="mx-8" src="../assets/open-source-logo.svg" />
-        <h2 class="text-3xl font-extrabold">
+        <img
+          class="h-48 mx-auto max-w-xs"
+          src="../assets/open-source-logo.svg"
+        />
+        <h2 class="text-3xl font-extrabold whitespace-normal sm:whitespace-no-wrap">
           Free and Open Source
         </h2>
-        <p class="mt-3">
+        <p class="lg:min-h-32 mt-3">
           Frappe Books is free software. This means it comes with the four
           essential freedoms. You are allowed to run it as you wish, you can
           look at its source code and modify it.
@@ -20,7 +23,7 @@
         </div>
       </div>
       <div
-        class="w-7/12 px-24 text-white text-center rounded-lg ml-8"
+        class="w-full lg:w-7/12 px-8 lg:px-24 pb-20 text-white text-center rounded-lg lg:ml-8 mt-8 lg:mt-0"
         style="background-image: linear-gradient(-143deg, #4AC3F8 0%, #2490EF 100%);"
       >
         <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
@@ -34,9 +37,9 @@
             </clipPath>
           </defs>
         </svg>
-        <div class="mt-24 flex justify-center">
+        <div class="mt-20 pt-2 flex justify-center">
           <div
-            class="w-24 h-24 rounded-full flex items-center justify-center"
+            class="w-20 h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center"
             style="background-color: #88C149;"
           >
             <svg width="46" height="51" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +54,7 @@
             </svg>
           </div>
           <div
-            class="w-24 h-24 rounded-full flex items-center justify-center"
+            class="w-20 h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center"
             style="background-color: #2f3241"
           >
             <svg
@@ -74,9 +77,10 @@
             </svg>
           </div>
           <div
-            class="w-24 h-24 bg-white rounded-full flex items-center justify-center"
+            class="w-20 h-20 lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center"
           >
             <svg
+              class="pt-2"
               width="48"
               height="48"
               viewBox="0 0 256 221"
@@ -105,7 +109,7 @@
         <h2 class="mt-10 text-3xl font-extrabold">
           How did we do it?
         </h2>
-        <p class="mt-3">
+        <p class="lg:min-h-32 mt-3">
           Frappe Books is built with our homegrown framework FrappeJS based on
           NodeJS and bundled with Electron. But it is still designed in a way
           how a desktop software functions.
@@ -117,15 +121,20 @@
         </div>
       </div>
     </div>
-    <div class="container w-full rounded-lg pt-16 mt-8 bg-blue-100 text-center">
-      <h2 class="text-3xl font-extrabold">From the team behind ERPNext</h2>
-      <p class="mt-3 mx-48">
-        We have been building business software for over a decade now. Learning
-        from our mistakes and picking the best parts of our flagship product
-        ERPNext, we came up with a simple app that does one thing well,
-        Accounting.
-      </p>
-      <img class="w-4/5 mx-auto rounded-t-lg mt-12" src="../assets/team-1.png" />
+    <div class="container">
+      <div class="w-full rounded-lg pt-16 mt-8 bg-blue-100 text-center">
+        <h2 class="text-3xl font-extrabold">From the team behind ERPNext</h2>
+        <p class="mt-3 mx-8 md:mx-32 lg:mx-48">
+          We have been building business software for over a decade now.
+          Learning from our mistakes and picking the best parts of our flagship
+          product ERPNext, we came up with a simple app that does one thing
+          well, Accounting.
+        </p>
+        <g-image
+          class="w-4/5 mx-auto rounded-t-lg mt-12"
+          src="../assets/team-1.png"
+        />
+      </div>
     </div>
   </section>
 </template>
