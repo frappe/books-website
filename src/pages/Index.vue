@@ -25,6 +25,7 @@
     <WhySection />
     <CardSection />
     <FeaturesSection />
+    <CTASection />
   </Layout>
 </template>
 
@@ -32,6 +33,7 @@
 import WhySection from '../components/WhySection.vue';
 import CardSection from '../components/CardSection.vue';
 import FeaturesSection from '../components/FeaturesSection.vue';
+import CTASection from '../components/CTASection.vue';
 import DownloadButton from '../components/DownloadButton.vue';
 import BooksHero from '@/assets/books-hero-preview.svg?inline';
 
@@ -43,6 +45,7 @@ export default {
     WhySection,
     CardSection,
     FeaturesSection,
+    CTASection,
     DownloadButton,
     BooksHero
   }
