@@ -65,14 +65,6 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import links from '@/../docs/doc-links.yaml';
 
