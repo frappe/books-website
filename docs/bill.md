@@ -1,20 +1,20 @@
 ---
-title: Invoice
-intro: An Invoice is a document you send to your Customers against which the Customer makes the payment.
+title: Bill
+intro: A bill is a document that you receive from your Suppliers against which you need to make the payment.
 ---
 
-## How to make an Invoice?
+## How to make a Bill?
 
-1. Go to **Sales** > **Invoice**.
+1. Go to **Purchases** > **Bill**.
 1. Click on the blue + button.
-1. Select your customer.
+1. Select your supplier.
 1. Add items.
 1. Click on Save and then Submit.
 
-## How to record payment against Invoice?
+## How to record payment against Bill?
 
-1. Go to **Sales** > **Invoice**.
-1. Click on an Invoice which is Unpaid.
+1. Go to **Purchases** > **Bill**.
+1. Click on a Bill which is Unpaid.
 1. Click on the button on the top right with three dots.
 1. Click on Make Payment. The Payment form will open on the side.
 1. Select the Payment Method as Cash, Cheque or Transfer.

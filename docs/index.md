@@ -1,5 +1,5 @@
 ---
-title: Frappe Books
+title: Introduction
 intro: Welcome to Frappe Books documentation.
 ---
 

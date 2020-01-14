@@ -11,10 +11,10 @@ your items.
 
 ## How to create a Tax template?
 
-1. Click on Setup and then Taxes in the sidebar.
+1. Go to **Setup** > **Taxes**.
 1. Click on the blue + button.
 1. Enter the name of the Tax template.
 1. Click on Add Row.
-1. Select the Tax Account and enter the rate.
+1. Select the Tax Account and enter the Rate.
 1. Repeat Steps 4 and 5 to add more Tax Accounts.
 1. Click on Save.

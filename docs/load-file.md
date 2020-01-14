@@ -20,6 +20,6 @@ Save.
 
 ### Existing File
 
-Click on Existing File if you have backup file of Frappe Books already. After
+Click on Existing File if you have a backup file of Frappe Books already. After
 selecting the file, Frappe Books will load the company information and
 transactions from it.

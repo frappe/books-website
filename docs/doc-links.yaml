@@ -31,9 +31,9 @@
   items:
     - title: General Ledger
       link: /docs/general-ledger/
-    - title: Trial Balance
-      link: /docs/trial-balance/
-    - title: Profit and Loss Statement
+    - title: Profit and Loss
       link: /docs/profit-and-loss-statement/
     - title: Balance Sheet
       link: /docs/balance-sheet/
+    - title: Trial Balance
+      link: /docs/trial-balance/
