@@ -1,12 +1,25 @@
 <template>
   <div>
     <Button
+      v-if="$isServer"
       class="bg-brand text-white font-semibold"
+      :href="fallbackDownloadLink"
+    >
+      Download
+    </Button>
+    <Button
+      v-else
+      class="bg-brand text-white font-semibold inline-flex items-center"
       :href="getDownloadLink(platform)"
     >
       Download for {{ platform }}
+      <DownloadIcon class="ml-6 w-5 h-5" />
     </Button>
-    <div class="mt-2 text-gray-700 text-xs">
+    <div
+      class="mt-2 text-xs"
+      v-if="!$isServer"
+      :class="{ 'text-gray-700': !darkBackground }"
+    >
       Also available for
       <a class="hover:underline" :href="getDownloadLink(otherPlatforms[0])">
         {{ otherPlatforms[0] }}
@@ -21,9 +34,18 @@
 
 <script>
 import { guessPlatform } from '../utils';
+import { DownloadIcon } from 'vue-feather-icons';
 
 export default {
   name: 'DownloadButton',
+  props: {
+    darkBackground: {
+      type: Boolean
+    }
+  },
+  components: {
+    DownloadIcon
+  },
   data() {
     return {
       platforms: ['macOS', 'Windows', 'Linux'],
