@@ -18,7 +18,7 @@
         </p>
         <div class="mt-10">
           <Button class="bg-brand text-white">
-            Learn More
+            Learn More ⟶
           </Button>
         </div>
       </div>
@@ -116,14 +116,14 @@
         </p>
         <div class="mt-10">
           <Button class="bg-white text-brand">
-            Learn More
+            Learn More ⟶
           </Button>
         </div>
       </div>
     </div>
     <div class="container">
       <div class="w-full rounded-lg pt-16 mt-8 bg-blue-100 text-center">
-        <h2 class="text-3xl font-extrabold">From the team behind ERPNext</h2>
+        <h2 class="text-3xl font-extrabold px-8">From the team behind ERPNext</h2>
         <p class="mt-3 mx-8 md:mx-32 lg:mx-48">
           We have been building business software for over a decade now.
           Learning from our mistakes and picking the best parts of our flagship
