@@ -24,7 +24,7 @@
       </div>
       <div
         class="w-full lg:w-7/12 px-8 lg:px-24 pb-20 text-white text-center rounded-lg lg:ml-8 mt-8 lg:mt-0"
-        style="background-image: linear-gradient(-143deg, #4AC3F8 0%, #2490EF 100%);"
+        style="background-image: linear-gradient(-143deg, rgb(143, 147, 255) 0%, rgb(94, 100, 255) 100%)"
       >
         <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
           <defs>
