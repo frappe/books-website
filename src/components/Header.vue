@@ -21,7 +21,7 @@
         <g-link class="ml-0 sm:ml-12 py-2" to="https://github.com/frappe/books">
           GitHub
         </g-link>
-        <g-link class="ml-0 sm:ml-12 py-2" to="/about">About</g-link>
+        <!-- <g-link class="ml-0 sm:ml-12 py-2" to="/about">About</g-link> -->
       </nav>
     </div>
   </header>
