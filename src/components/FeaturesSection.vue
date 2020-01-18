@@ -169,8 +169,7 @@ export default {
           title: 'Journal Entries',
           icon: journalEntriesIcon,
           description:
-            'Record ad-hoc accounting entries for entering expenses, opening entries, and bank payments.',
-          link: '/docs/journal-entry'
+            'Record ad-hoc accounting entries for entering expenses, opening entries, and bank payments.'
         },
         {
           title: 'Invoice Templates',
