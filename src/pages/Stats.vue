@@ -4,41 +4,58 @@
       <div class="py-20">
         <h1 class="font-semibold text-2xl">Download Counts</h1>
 
-        <div class="mt-6 w-1/2" v-for="release in releases">
-          <div>
-            <div class="flex justify-between items-center py-2">
-              <h2 class="font-bold">
-                {{ release.name }}
-              </h2>
-              <span class="font-bold">
-                {{ getTotalCount(release) }}
-              </span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                macOS
-              </div>
-              <span>
-                {{ getDownloadCount(release.assets, 'macOS') }}
-              </span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                Linux
-              </div>
-              <span>
-                {{ getDownloadCount(release.assets, 'Linux') }}
-              </span>
-            </div>
-            <div class="flex justify-between items-center py-2">
-              <div>
-                Windows
-              </div>
-              <span>
-                {{ getDownloadCount(release.assets, 'Windows') }}
-              </span>
-            </div>
-          </div>
+        <div class="w-full overflow-auto">
+          <table
+            class="text-sm text-gray-900 border-l border-r mt-6 table-fixed border-collapse"
+            v-if="releases.length"
+          >
+            <thead>
+              <tr class="text-right bg-gray-100">
+                <th class="text-left border-t border-b px-4 py-4 w-1/5">
+                  Release
+                </th>
+                <th
+                  class="border-t border-b px-4 py-4 w-1/5"
+                  v-for="platform in ['macOS', 'Linux', 'Windows']"
+                >
+                  {{ platform }}
+                </th>
+                <th class="border-t border-b px-4 py-4 w-1/5">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-right" v-for="release in releases">
+                <td
+                  class="text-left whitespace-no-wrap border-t border-b px-4 py-4"
+                >
+                  {{ release.name }}
+                </td>
+                <td
+                  class="border-t border-b px-4 py-4"
+                  v-for="platform in ['macOS', 'Linux', 'Windows']"
+                >
+                  {{ getDownloadCount(release.assets, platform) }}
+                </td>
+                <th class="border-t border-b px-4 py-4">
+                  {{ getTotalCount(release) }}
+                </th>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="text-right bg-gray-100">
+                <th class="border-t border-b px-4 py-4"></th>
+                <th
+                  class="border-t border-b px-4 py-4"
+                  v-for="platform in ['macOS', 'Linux', 'Windows']"
+                >
+                  {{ getTotalCountByPlatform(platform) }}
+                </th>
+                <th class="border-t border-b px-4 py-4">
+                  {{ getGrandTotal() }}
+                </th>
+              </tr>
+            </tfoot>
+          </table>
         </div>
       </div>
     </div>
@@ -57,6 +74,9 @@ export default {
       'https://api.github.com/repos/frappe/books/releases'
     );
     this.releases = await response.json();
+    this.releases = this.releases.filter(
+      release => !release.name.includes('Frappe Accounting')
+    );
   },
   methods: {
     getDownloadCount(assets, platform) {
@@ -72,15 +92,28 @@ export default {
         filterFunction = asset => asset.name.endsWith('.exe');
       }
       let platformAssets = assets.filter(filterFunction);
-      return platformAssets.reduce((sum, asset) => {
-        return sum + asset.download_count;
-      }, 0);
+      return platformAssets.reduce(
+        (sum, asset) => sum + asset.download_count,
+        0
+      );
+    },
+    getTotalCountByPlatform(platform) {
+      return this.releases.reduce(
+        (sum, release) => sum + this.getDownloadCount(release.assets, platform),
+        0
+      );
     },
     getTotalCount(release) {
       return (
         this.getDownloadCount(release.assets, 'macOS') +
         this.getDownloadCount(release.assets, 'Linux') +
         this.getDownloadCount(release.assets, 'Windows')
+      );
+    },
+    getGrandTotal() {
+      return this.releases.reduce(
+        (sum, release) => sum + this.getTotalCount(release),
+        0
       );
     }
   }
