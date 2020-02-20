@@ -25,6 +25,12 @@ module.exports = {
       options: {
         goesBothWays: true
       }
+    },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-8911157-25'
+      }
     }
   ],
   css: {
