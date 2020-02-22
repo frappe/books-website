@@ -34,7 +34,7 @@ module.exports = {
         7: '1.75rem'
       },
       colors: {
-        brand: '#2490EF'
+        brand: '#5e64ff'
       },
       minHeight: {
         32: '8rem'

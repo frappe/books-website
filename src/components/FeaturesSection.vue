@@ -37,8 +37,8 @@
                 class="w-7 h-7 mr-5 mt-1 flex-shrink-0"
                 :is="feature.icon"
                 :style="{
-                  '--color-light': active === feature ? '#AFD3F2' : '#B7BFC6',
-                  '--color-dark': active === feature ? '#2490EF' : '#415668'
+                  '--color-light': active === feature ? '#dbddff' : '#B7BFC6',
+                  '--color-dark': active === feature ? '#5e64ff' : '#415668'
                 }"
               />
               <div>
